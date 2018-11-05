@@ -7,14 +7,15 @@ var Conf Config
 
 // Config Config
 type Config struct {
-	AuthFile string   // 目录配置文件
-	Emails   []string // 发送的email地址
-	SMTP     SMTP
+	AuthFile  string   // 目录配置文件
+	Emails    []string // 发送的email地址
+	SMTP      SMTP
+	CronEntry string // 定时
 }
 
 // SMTP SMTP
 type SMTP struct {
-	Addr string
+	Host string
 	Port int
 	User string
 	Pass string
